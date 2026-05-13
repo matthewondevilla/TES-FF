@@ -1,0 +1,718 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Browse UCLA-inspired campus venues for ceremonies, athletics events, conferences, student meetings, and outdoor programs.">
+    <title>Venues | UCLA Event Services</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+  </head>
+  <body>
+    <!-- ANNOUNCEMENT BAR -->
+    <div class="announcement-bar" role="alert">
+      <span>
+        <i class="bi bi-megaphone-fill me-2"></i>
+        <strong>Summer 2025 Venue Booking is Now Open.</strong>
+        Submit requests for events scheduled June 16 – Sept 19.
+        <a href="booking.html">Reserve Your Date &rarr;</a>
+      </span>
+
+      <button id="closeAnnouncement"
+              class="btn-close btn-close-sm ms-3 float-end"
+              aria-label="Dismiss">
+      </button>
+    </div>
+        <!-- TOP UTILITY BAR -->
+    <div class="top-bar" aria-label="Campus links">
+      <div class="container d-flex justify-content-between align-items-center">
+
+        <span>
+          <i class="bi bi-geo-alt-fill me-1"></i>
+          Los Angeles, CA 90095
+        </span>
+
+        <div class="top-bar-links d-flex gap-3">
+          <a href="#">MyUCLA</a>
+          <a href="#">BruinLearn</a>
+          <a href="#">Campus Directory</a>
+          <a href="#">Emergency</a>
+        </div>
+
+      </div>
+    </div>
+
+
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-main navbar-expand-lg sticky-top">
+
+      <div class="container">
+
+        <a class="navbar-brand navbar-brand-wrap" href="index.html">
+
+          <div class="nav-logo-badge">UCLA</div>
+
+          <div class="nav-brand-text">
+            <span class="dept-name">Event Services</span>
+            <span class="dept-sub">Venue Operations</span>
+          </div>
+
+        </a>
+
+        <button class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#mainNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="mainNav">
+
+          <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-1">
+
+            <li class="nav-item">
+              <a class="nav-link active" href="index.html">Home</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="venues.html">Venues</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="services.html">Services</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="policies.html">Policies & FAQ</a>
+            </li>
+
+            <li class="nav-item ms-lg-2">
+              <a class="nav-link btn-nav-cta" href="booking.html">
+                <i class="bi bi-calendar-plus me-1"></i>
+                Book an Event
+              </a>
+            </li>
+
+          </ul>
+
+        </div>
+
+      </div>
+
+    </nav>
+
+    <main>
+      <header class="page-header py-5">
+        <div class="container py-4">
+          <span class="eyebrow">Reserve campus space</span>
+          <h1 class="display-5">Venues for lectures, performances, receptions, and outdoor gatherings.</h1>
+          <p class="lead mb-0 lead-narrow">Explore a curated set of UCLA-style spaces, from iconic performance halls to flexible meeting rooms and open plazas.</p>
+        </div>
+      </header>
+
+  <!-- ============================================================
+       SEARCH + FILTER BAR
+       ============================================================ -->
+  <section class="py-4 bg-light-gray border-bottom">
+    <div class="container">
+      <div class="venue-search-wrap">
+        <div class="row align-items-center g-3">
+          <!-- Search input -->
+          <div class="col-md-5">
+            <label for="venueSearch" class="form-label mb-1">
+              <i class="bi bi-search me-1 text-ucla-blue"></i>Search Venues
+            </label>
+            <input
+              type="search"
+              class="form-control"
+              id="venueSearch"
+              placeholder="e.g. Royce Hall, conference room…"
+              aria-label="Search venues by name"
+            />
+          </div>
+          <!-- Capacity filter -->
+          <div class="col-md-3">
+            <label for="capacityFilter" class="form-label mb-1">
+              <i class="bi bi-people me-1 text-ucla-blue"></i>Min. Capacity
+            </label>
+            <select class="form-select" id="capacityFilter" aria-label="Filter by capacity">
+              <option value="">Any Size</option>
+              <option value="25">25+</option>
+              <option value="100">100+</option>
+              <option value="500">500+</option>
+              <option value="1000">1,000+</option>
+            </select>
+          </div>
+          <!-- Type filter pills -->
+          <div class="col-md-4">
+            <label class="form-label mb-1 d-block">
+              <i class="bi bi-funnel me-1 text-ucla-blue"></i>Venue Type
+            </label>
+            <div class="d-flex flex-wrap gap-2">
+              <button class="btn btn-sm btn-ucla-primary active" data-venue-filter="all">All</button>
+              <button class="btn btn-sm btn-outline-ucla" data-venue-filter="indoor">Indoor</button>
+              <button class="btn btn-sm btn-outline-ucla" data-venue-filter="outdoor">Outdoor</button>
+              <button class="btn btn-sm btn-outline-ucla" data-venue-filter="conference">Conference</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       VENUES GRID
+       ============================================================ -->
+  <section class="py-5">
+    <div class="container">
+
+      <!-- ── Signature / Landmark Venues ── -->
+      <div class="mb-3">
+        <span class="section-label">Landmark Spaces</span>
+        <h2 class="section-title">Signature Venues</h2>
+        <div class="section-divider"></div>
+      </div>
+
+      <div class="row g-4 mb-5">
+
+        <!-- Royce Hall -->
+        <div class="col-md-6 col-lg-4" data-venue-col>
+          <div class="venue-card card h-100" data-venue-type="indoor" id="royce">
+            <div class="venue-img-wrap">
+              <img src="https://images.unsplash.com/photo-1580582932707-520aed937b7b?w=700&q=75"
+                   alt="Grand auditorium interior" loading="lazy" />
+              <span class="venue-badge premium">Signature Venue</span>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Royce Hall</h5>
+              <div class="venue-location"><i class="bi bi-geo-alt"></i> Central Campus</div>
+              <div class="venue-meta">
+                <span class="venue-meta-chip"><i class="bi bi-people"></i> 1,833 seats</span>
+                <span class="venue-meta-chip"><i class="bi bi-building"></i> Indoor</span>
+                <span class="venue-meta-chip"><i class="bi bi-star-fill text-warning"></i> Historic</span>
+              </div>
+              <p class="venue-equipment">
+                <strong>Equipment:</strong> Full concert-grade Meyer Sound system · 4K laser projection
+                · 48-channel digital console · LED stage wash · Green rooms (×4) · Live-stream encoding station
+              </p>
+              <div class="site-alert">
+                <i class="bi bi-info-circle-fill"></i>
+                <span>Minimum 30-day advance booking required. Alcohol permit subject to Dean's approval.</span>
+              </div>
+            </div>
+            <div class="card-footer">
+              <span class="venue-avail"><span class="dot-green"></span> Limited Dates Open</span>
+              <button class="btn-ucla-primary" style="padding:0.42rem 1.1rem;font-size:0.82rem;"
+                      data-bs-toggle="modal" data-bs-target="#availModal"
+                      data-avail-venue="Royce Hall">
+                Check Availability
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Pauley Pavilion -->
+        <div class="col-md-6 col-lg-4" data-venue-col>
+          <div class="venue-card card h-100" data-venue-type="indoor" id="pauley">
+            <div class="venue-img-wrap">
+              <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=700&q=75"
+                   alt="Large indoor arena" loading="lazy" />
+              <span class="venue-badge indoor">Arena</span>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Pauley Pavilion</h5>
+              <div class="venue-location"><i class="bi bi-geo-alt"></i> South Campus Athletic Zone</div>
+              <div class="venue-meta">
+                <span class="venue-meta-chip"><i class="bi bi-people"></i> 13,800 cap.</span>
+                <span class="venue-meta-chip"><i class="bi bi-building"></i> Indoor</span>
+                <span class="venue-meta-chip"><i class="bi bi-camera-video"></i> Broadcast-Ready</span>
+              </div>
+              <p class="venue-equipment">
+                <strong>Equipment:</strong> Arena-scale d&amp;b PA · Center-hung Daktronics scoreboard
+                · Full broadcast control room · HD camera rigging points · VIP suites · Locker facilities
+              </p>
+              <div class="site-alert">
+                <i class="bi bi-info-circle-fill"></i>
+                <span>Large-scale event security plan required. Minimum 45-day lead time for arena configuration.</span>
+              </div>
+            </div>
+            <div class="card-footer">
+              <span class="venue-avail"><span class="dot-green"></span> Select Dates Available</span>
+              <button class="btn-ucla-primary" style="padding:0.42rem 1.1rem;font-size:0.82rem;"
+                      data-bs-toggle="modal" data-bs-target="#availModal"
+                      data-avail-venue="Pauley Pavilion">
+                Check Availability
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Ackerman Grand Ballroom -->
+        <div class="col-md-6 col-lg-4" data-venue-col>
+          <div class="venue-card card h-100" data-venue-type="indoor">
+            <div class="venue-img-wrap">
+              <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=700&q=75"
+                   alt="Elegant university ballroom" loading="lazy" />
+              <span class="venue-badge premium">Ballroom</span>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Ackerman Grand Ballroom</h5>
+              <div class="venue-location"><i class="bi bi-geo-alt"></i> Ackerman Union, 2nd Floor</div>
+              <div class="venue-meta">
+                <span class="venue-meta-chip"><i class="bi bi-people"></i> 700 cap.</span>
+                <span class="venue-meta-chip"><i class="bi bi-building"></i> Indoor</span>
+                <span class="venue-meta-chip"><i class="bi bi-cup-hot"></i> Catering OK</span>
+              </div>
+              <p class="venue-equipment">
+                <strong>Equipment:</strong> Built-in Harman sound system · Intelligent lighting grid
+                · 120" motorized screens (×2) · Portable stage sections · Banquet table inventory
+              </p>
+              <div class="site-alert">
+                <i class="bi bi-info-circle-fill"></i>
+                <span>High demand ballroom venue. Recommended 21 day lead time for banquet, conference, or reception layouts.</span>
+              </div>
+            </div>
+            <div class="card-footer">
+              <span class="venue-avail"><span class="dot-green"></span> Good Availability</span>
+              <button class="btn-ucla-primary" style="padding:0.42rem 1.1rem;font-size:0.82rem;"
+                      data-bs-toggle="modal" data-bs-target="#availModal"
+                      data-avail-venue="Ackerman Grand Ballroom">
+                Check Availability
+              </button>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /row: signature -->
+
+      <!-- ── Outdoor Venues ── -->
+      <div class="mb-3">
+        <span class="section-label">Open-Air Spaces</span>
+        <h2 class="section-title">Outdoor Venues</h2>
+        <div class="section-divider"></div>
+      </div>
+
+      <div class="row g-4 mb-5">
+
+        <!-- Sunset Canyon Recreation Plaza -->
+        <div class="col-md-6 col-lg-4" data-venue-col id="sunset">
+          <div class="venue-card card h-100" data-venue-type="outdoor">
+            <div class="venue-img-wrap">
+              <img src="https://images.unsplash.com/photo-1519167758481-83f550bb49b3?w=700&q=75"
+                   alt="Outdoor campus plaza" loading="lazy" />
+              <span class="venue-badge outdoor">Outdoor Plaza</span>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Sunset Canyon Recreation Plaza</h5>
+              <div class="venue-location"><i class="bi bi-geo-alt"></i> North Campus, Near Residential</div>
+              <div class="venue-meta">
+                <span class="venue-meta-chip"><i class="bi bi-people"></i> 500 cap.</span>
+                <span class="venue-meta-chip"><i class="bi bi-sun"></i> Outdoor</span>
+                <span class="venue-meta-chip"><i class="bi bi-truck"></i> Food Trucks</span>
+              </div>
+              <p class="venue-equipment">
+                <strong>Equipment:</strong> Portable stage (24×16 ft) · Outdoor PA system
+                · 20-amp power pedestals · Market lighting available · Tent attachment points
+              </p>
+            </div>
+            <div class="card-footer">
+              <span class="venue-avail"><span class="dot-green"></span> Open Availability</span>
+              <button class="btn-ucla-primary" style="padding:0.42rem 1.1rem;font-size:0.82rem;"
+                      data-bs-toggle="modal" data-bs-target="#availModal"
+                      data-avail-venue="Sunset Canyon Recreation Plaza">
+                Check Availability
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Dickson Court North -->
+        <div class="col-md-6 col-lg-4" data-venue-col>
+          <div class="venue-card card h-100" data-venue-type="outdoor">
+            <div class="venue-img-wrap">
+              <img src="https://images.unsplash.com/photo-1465495976277-4387d4b0b4c6?w=700&q=75"
+                   alt="Open campus courtyard" loading="lazy" />
+              <span class="venue-badge outdoor">Courtyard</span>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Dickson Court North</h5>
+              <div class="venue-location"><i class="bi bi-geo-alt"></i> Central Campus Core</div>
+              <div class="venue-meta">
+                <span class="venue-meta-chip"><i class="bi bi-people"></i> 2,000 cap.</span>
+                <span class="venue-meta-chip"><i class="bi bi-sun"></i> Outdoor</span>
+                <span class="venue-meta-chip"><i class="bi bi-music-note-beamed"></i> Concert-Ready</span>
+              </div>
+              <p class="venue-equipment">
+                <strong>Equipment:</strong> Large-format outdoor stage available · Line-array PA rental
+                · Festival fencing · Generator tie-in points · Vendor row layout support
+              </p>
+            </div>
+            <div class="card-footer">
+              <span class="venue-avail"><span class="dot-green"></span> Available Weekends</span>
+              <button class="btn-ucla-primary" style="padding:0.42rem 1.1rem;font-size:0.82rem;"
+                      data-bs-toggle="modal" data-bs-target="#availModal"
+                      data-avail-venue="Dickson Court North">
+                Check Availability
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Inverted Fountain Terrace -->
+        <div class="col-md-6 col-lg-4" data-venue-col>
+          <div class="venue-card card h-100" data-venue-type="outdoor">
+            <div class="venue-img-wrap">
+              <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=700&q=75"
+                   alt="Terrace gathering space" loading="lazy" />
+              <span class="venue-badge outdoor">Terrace</span>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Inverted Fountain Terrace</h5>
+              <div class="venue-location"><i class="bi bi-geo-alt"></i> Near Engineering &amp; CLICC</div>
+              <div class="venue-meta">
+                <span class="venue-meta-chip"><i class="bi bi-people"></i> 150 cap.</span>
+                <span class="venue-meta-chip"><i class="bi bi-sun"></i> Outdoor</span>
+                <span class="venue-meta-chip"><i class="bi bi-flower1"></i> Scenic</span>
+              </div>
+              <p class="venue-equipment">
+                <strong>Equipment:</strong> Bistro lighting available · Small-format PA · Outdoor folding seating ·
+                Intimate ceremony layouts
+              </p>
+            </div>
+            <div class="card-footer">
+              <span class="venue-avail"><span class="dot-green"></span> Open Availability</span>
+              <button class="btn-ucla-primary" style="padding:0.42rem 1.1rem;font-size:0.82rem;"
+                      data-bs-toggle="modal" data-bs-target="#availModal"
+                      data-avail-venue="Inverted Fountain Terrace">
+                Check Availability
+              </button>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /row: outdoor -->
+
+      <!-- ── Conference & Classroom Venues ── -->
+      <div class="mb-3">
+        <span class="section-label">Meeting Spaces</span>
+        <h2 class="section-title">Conference &amp; Classroom Venues</h2>
+        <div class="section-divider"></div>
+      </div>
+
+      <div class="row g-4">
+
+        <!-- Luskin Conference Center -->
+        <div class="col-md-6 col-lg-3" data-venue-col>
+          <div class="venue-card card h-100" data-venue-type="conference">
+            <div class="venue-img-wrap" style="height:180px;">
+              <img src="https://images.unsplash.com/photo-1517502884422-41eaead166d4?w=600&q=75"
+                   alt="Modern conference center" loading="lazy" />
+              <span class="venue-badge indoor">Conference</span>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Luskin Conference Center</h5>
+              <div class="venue-location"><i class="bi bi-geo-alt"></i> De Neve Dr, West Campus</div>
+              <div class="venue-meta">
+                <span class="venue-meta-chip"><i class="bi bi-people"></i> 250 cap.</span>
+                <span class="venue-meta-chip"><i class="bi bi-wifi"></i> High-Speed WiFi</span>
+              </div>
+              <p class="venue-equipment">Full AV suite · Breakout rooms · Hotel accommodations adjacent · Catering kitchen</p>
+            </div>
+            <div class="card-footer">
+              <span class="venue-avail"><span class="dot-green"></span> Available</span>
+              <button class="btn-ucla-primary" style="padding:0.38rem 0.9rem;font-size:0.78rem;"
+                      data-bs-toggle="modal" data-bs-target="#availModal"
+                      data-avail-venue="Luskin Conference Center">
+                Check Availability
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Young Research Library Seminar Rooms -->
+        <div class="col-md-6 col-lg-3" data-venue-col>
+          <div class="venue-card card h-100" data-venue-type="conference">
+            <div class="venue-img-wrap" style="height:180px;">
+              <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&q=75"
+                   alt="Library seminar room" loading="lazy" />
+              <span class="venue-badge indoor">Seminar</span>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">YRL Seminar Rooms</h5>
+              <div class="venue-location"><i class="bi bi-geo-alt"></i> Young Research Library</div>
+              <div class="venue-meta">
+                <span class="venue-meta-chip"><i class="bi bi-people"></i> 12–40 cap.</span>
+                <span class="venue-meta-chip"><i class="bi bi-display"></i> Smart Room</span>
+              </div>
+              <p class="venue-equipment">Interactive displays · Video conferencing · Whiteboards · Quiet academic setting</p>
+            </div>
+            <div class="card-footer">
+              <span class="venue-avail"><span class="dot-green"></span> Available</span>
+              <button class="btn-ucla-primary" style="padding:0.38rem 0.9rem;font-size:0.78rem;"
+                      data-bs-toggle="modal" data-bs-target="#availModal"
+                      data-avail-venue="YRL Seminar Rooms">
+                Check Availability
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Carnesale Commons -->
+        <div class="col-md-6 col-lg-3" data-venue-col>
+          <div class="venue-card card h-100" data-venue-type="conference">
+            <div class="venue-img-wrap" style="height:180px;">
+              <img src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?w=600&q=75"
+                   alt="Multi-purpose meeting hall" loading="lazy" />
+              <span class="venue-badge indoor">Multi-Purpose</span>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Carnesale Commons</h5>
+              <div class="venue-location"><i class="bi bi-geo-alt"></i> Chancellor's Row, North Campus</div>
+              <div class="venue-meta">
+                <span class="venue-meta-chip"><i class="bi bi-people"></i> 120 cap.</span>
+                <span class="venue-meta-chip"><i class="bi bi-cup-hot"></i> Catering</span>
+              </div>
+              <p class="venue-equipment">Flexible layout · Integrated AV · Outdoor terrace access · Premium finishes</p>
+            </div>
+            <div class="card-footer">
+              <span class="venue-avail"><span class="dot-green"></span> Available</span>
+              <button class="btn-ucla-primary" style="padding:0.38rem 0.9rem;font-size:0.78rem;"
+                      data-bs-toggle="modal" data-bs-target="#availModal"
+                      data-avail-venue="Carnesale Commons">
+                Check Availability
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bunche Hall Seminar -->
+        <div class="col-md-6 col-lg-3" data-venue-col>
+          <div class="venue-card card h-100" data-venue-type="conference">
+            <div class="venue-img-wrap" style="height:180px;">
+              <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=600&q=75"
+                   alt="Academic seminar room" loading="lazy" />
+              <span class="venue-badge indoor">Seminar</span>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Bunche Hall Seminar Suite</h5>
+              <div class="venue-location"><i class="bi bi-geo-alt"></i> Bunche Hall, 5th Floor</div>
+              <div class="venue-meta">
+                <span class="venue-meta-chip"><i class="bi bi-people"></i> 30–80 cap.</span>
+                <span class="venue-meta-chip"><i class="bi bi-projector"></i> Projection</span>
+              </div>
+              <p class="venue-equipment">Dual projection · Tiered seating · Panel layout · Adjacent lounge / networking space</p>
+            </div>
+            <div class="card-footer">
+              <span class="venue-avail"><span class="dot-green"></span> Available</span>
+              <button class="btn-ucla-primary" style="padding:0.38rem 0.9rem;font-size:0.78rem;"
+                      data-bs-toggle="modal" data-bs-target="#availModal"
+                      data-avail-venue="Bunche Hall Seminar Suite">
+                Check Availability
+              </button>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /row: conference -->
+
+      <!-- Bottom CTA -->
+      <!-- <div class="text-center mt-5 p-4 rounded-3" style="background:var(--ucla-light);">
+        <h5 class="fw-700 text-ucla-navy mb-2">Don't see what you're looking for?</h5>
+        <p class="text-muted mb-3">Our coordinators can match you with the right space from our full portfolio of 60+ venues.</p>
+        <a href="booking.html" class="btn-ucla-primary me-2">
+          <i class="bi bi-calendar-plus"></i> Submit a Booking Request
+        </a>
+        <a href="mailto:eventservices@ucla.edu" class="btn-outline-ucla">
+          <i class="bi bi-envelope"></i> Contact a Coordinator
+        </a>
+      </div> -->
+      <div class="venue-bottom-cta text-center mt-5">
+  <h5>Don't see what you're looking for?</h5>
+
+  <p>
+    Our coordinators can match you with the right space from our full
+    portfolio of 60+ venues.
+  </p>
+
+  <a href="booking.html" class="btn-ucla-primary me-2">
+    <i class="bi bi-calendar-plus"></i>
+    Submit a Booking Request
+  </a>
+
+  <a href="mailto:eventservices@ucla.edu" class="btn-outline-ucla">
+    <i class="bi bi-envelope"></i>
+    Contact a Coordinator
+  </a>
+</div>
+
+    </div>
+  </section>
+
+  <!-- ============================================================
+       AVAILABILITY MODAL
+       ============================================================ -->
+  <div class="modal fade" id="availModal" tabindex="-1" aria-labelledby="availModalTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content border-0 shadow-lg">
+        <div class="modal-header">
+          <h5 class="modal-title" id="availModalTitle">Check Availability</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p class="text-muted mb-4">
+            Complete the fields below to check availability for this venue. A coordinator will respond within 2 business days.
+          </p>
+          <form>
+            <div class="row g-3">
+              <div class="col-md-6">
+                <label class="form-label">Preferred Date</label>
+                <input type="date" class="form-control" min="2025-01-01" />
+              </div>
+              <div class="col-md-6">
+                <label class="form-label">Alternate Date</label>
+                <input type="date" class="form-control" />
+              </div>
+              <div class="col-md-4">
+                <label class="form-label">Start Time</label>
+                <input type="time" class="form-control" />
+              </div>
+              <div class="col-md-4">
+                <label class="form-label">End Time</label>
+                <input type="time" class="form-control" />
+              </div>
+              <div class="col-md-4">
+                <label class="form-label">Estimated Guests</label>
+                <input type="number" class="form-control" placeholder="e.g. 150" min="1" />
+              </div>
+              <div class="col-12">
+                <label class="form-label">Your Name &amp; Email</label>
+                <div class="row g-2">
+                  <div class="col-md-6">
+                    <input type="text" class="form-control" placeholder="Full Name" />
+                  </div>
+                  <div class="col-md-6">
+                    <input type="email" class="form-control" placeholder="you@ucla.edu" />
+                  </div>
+                </div>
+              </div>
+              <div class="col-12">
+                <label class="form-label">Brief Event Description</label>
+                <textarea class="form-control" rows="2" placeholder="e.g. Annual department awards ceremony…"></textarea>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer border-0 pt-0">
+          <button type="button" class="btn-outline-ucla" data-bs-dismiss="modal">Cancel</button>
+          <button type="button" class="btn-ucla-primary" data-bs-dismiss="modal">
+            <i class="bi bi-send"></i> Submit Inquiry
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+      <!-- ============================================================
+       FOOTER
+       ============================================================ -->
+  <footer class="footer-main" aria-label="Site footer">
+    <div class="container">
+      <div class="row g-5">
+        <!-- Brand column -->
+        <div class="col-lg-4 col-md-6">
+          <div class="footer-brand">
+            <div class="logo-badge">UCLA</div>
+            <div class="mt-1" style="color:rgba(255,255,255,0.85);font-weight:700;font-size:1rem;">
+              Event Services &amp; Venue Operations
+            </div>
+            <p>
+              Serving student organizations, faculty, staff, and approved campus
+              partners with professional event coordination since 1986.
+            </p>
+            <!-- Social icons -->
+            <div class="footer-social" aria-label="Social media links">
+              <a href="#" class="social-btn" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+              <a href="#" class="social-btn" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+              <a href="#" class="social-btn" aria-label="Twitter / X"><i class="bi bi-twitter-x"></i></a>
+              <a href="#" class="social-btn" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Navigation column -->
+        <div class="col-lg-2 col-sm-6">
+          <div class="footer-col">
+            <h6>Navigate</h6>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="venues.html">Venues</a></li>
+              <li><a href="services.html">Services</a></li>
+              <li><a href="booking.html">Book an Event</a></li>
+              <li><a href="policies.html">Policies &amp; FAQ</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Resources column -->
+        <div class="col-lg-2 col-sm-6">
+          <div class="footer-col">
+            <h6>Resources</h6>
+            <ul>
+              <li><a href="#">Event Planning Guide</a></li>
+              <li><a href="#">Catering Partners</a></li>
+              <li><a href="#">Insurance Requirements</a></li>
+              <li><a href="#">Campus Map</a></li>
+              <li><a href="#">Bruin Events Calendar</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Contact column -->
+        <div class="col-lg-4 col-md-6">
+          <div class="footer-col">
+            <h6>Contact Us</h6>
+            <div class="footer-contact-item">
+              <i class="bi bi-geo-alt-fill"></i>
+              <span>308 Westwood Plaza, Suite 105<br>Los Angeles, CA 90095</span>
+            </div>
+            <div class="footer-contact-item">
+              <i class="bi bi-telephone-fill"></i>
+              <span>(310) 825-1234</span>
+            </div>
+            <div class="footer-contact-item">
+              <i class="bi bi-envelope-fill"></i>
+              <span>eventservices@ucla.edu</span>
+            </div>
+            <div class="footer-contact-item">
+              <i class="bi bi-clock-fill"></i>
+              <span>Mon – Fri: 8:00 AM – 5:00 PM</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer bottom bar -->
+    <div class="footer-bottom">
+      <div class="container d-flex flex-wrap justify-content-between align-items-center gap-2">
+        <span>&copy; 2025 The Regents of the University of California. All rights reserved.</span>
+        <div class="d-flex gap-3 flex-wrap">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Accessibility</a>
+          <a href="#">Terms of Use</a>
+          <a href="#">Campus Safety</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+    <!-- Scroll to top -->
+    <button id="scrollTopBtn" aria-label="Scroll to top">
+      <i class="bi bi-arrow-up"></i>
+    </button>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

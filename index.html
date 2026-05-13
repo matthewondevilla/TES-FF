@@ -1,0 +1,726 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="UCLA-inspired campus event operations and venue services portal for event planning, reservations, and production support.">
+    <title>UCLA Event Operations & Venue Services</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+
+    <link rel="stylesheet" href="assets/css/styles.css">
+  </head>
+
+  <body>
+
+    <!-- ANNOUNCEMENT BAR -->
+    <div class="announcement-bar" role="alert">
+      <span>
+        <i class="bi bi-megaphone-fill me-2"></i>
+        <strong>Summer 2025 Venue Booking is Now Open.</strong>
+        Submit requests for events scheduled June 16 – Sept 19.
+        <a href="booking.html">Reserve Your Date &rarr;</a>
+      </span>
+
+      <button id="closeAnnouncement"
+              class="btn-close btn-close-sm ms-3 float-end"
+              aria-label="Dismiss">
+      </button>
+    </div>
+
+
+    <!-- TOP UTILITY BAR -->
+    <div class="top-bar" aria-label="Campus links">
+      <div class="container d-flex justify-content-between align-items-center">
+
+        <span>
+          <i class="bi bi-geo-alt-fill me-1"></i>
+          Los Angeles, CA 90095
+        </span>
+
+        <div class="top-bar-links d-flex gap-3">
+          <a href="#">MyUCLA</a>
+          <a href="#">BruinLearn</a>
+          <a href="#">Campus Directory</a>
+          <a href="#">Emergency</a>
+        </div>
+
+      </div>
+    </div>
+
+
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-main navbar-expand-lg sticky-top">
+
+      <div class="container">
+
+        <a class="navbar-brand navbar-brand-wrap" href="index.html">
+
+          <div class="nav-logo-badge">UCLA</div>
+
+          <div class="nav-brand-text">
+            <span class="dept-name">Event Services</span>
+            <span class="dept-sub">Venue Operations</span>
+          </div>
+
+        </a>
+
+        <button class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#mainNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="mainNav">
+
+          <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-1">
+
+            <li class="nav-item">
+              <a class="nav-link active" href="index.html">Home</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="venues.html">Venues</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="services.html">Services</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="policies.html">Policies & FAQ</a>
+            </li>
+
+            <li class="nav-item ms-lg-2">
+              <a class="nav-link btn-nav-cta" href="booking.html">
+                <i class="bi bi-calendar-plus me-1"></i>
+                Book an Event
+              </a>
+            </li>
+
+          </ul>
+
+        </div>
+
+      </div>
+
+    </nav>
+
+
+    <main>
+
+      <!-- HERO -->
+      <section class="hero">
+
+        <div class="container hero-content">
+
+          <span class="eyebrow">
+            Campus event operations
+          </span>
+
+          <h1 class="display-4 mb-3">
+            Plan polished campus events with venue,
+            technical, and operations support.
+          </h1>
+
+          <p class="mb-4">
+            A central service portal for student organizations,
+            faculty, staff, departments, and approved partners.
+          </p>
+
+          <div class="d-flex flex-column flex-sm-row gap-3">
+
+            <a class="btn btn-warning btn-lg"
+               href="booking.html">
+              Reserve a Venue
+            </a>
+
+            <a class="btn btn-outline-light btn-lg"
+               href="services.html">
+              Request Event Support
+            </a>
+
+            <a class="btn btn-outline-light btn-lg"
+               href="venues.html">
+              Explore Campus Spaces
+            </a>
+
+            <a class="btn btn-outline-light btn-lg"
+               href="policies.html">
+              Event Policies
+            </a>
+
+          </div>
+
+        </div>
+
+      </section>
+
+
+      <!-- STATS -->
+      <section class="info-strip">
+
+        <div class="container">
+
+          <div class="row g-3 hero-stats">
+
+            <div class="col-lg-3 col-md-6">
+              <div class="stat-tile stat-chip">
+                <div class="stat-number stat-num-animated"
+                     data-target="8200"
+                     data-suffix="+">
+                  8200+
+                </div>
+                <p class="mb-0">Annual Events</p>
+              </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+              <div class="stat-tile stat-chip">
+                <div class="stat-number stat-num-animated"
+                     data-target="120"
+                     data-suffix="+">
+                  120+
+                </div>
+                <p class="mb-0">Campus Venues</p>
+              </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+              <div class="stat-tile stat-chip">
+                <div class="stat-number stat-num-animated"
+                     data-target="95"
+                     data-suffix="%">
+                  95%
+                </div>
+                <p class="mb-0">Client Satisfaction</p>
+              </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+              <div class="stat-tile stat-chip">
+                <div class="stat-number stat-num-animated"
+                     data-target="50"
+                     data-suffix="K+">
+                  50K+
+                </div>
+                <p class="mb-0">Guests Served / Year</p>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </section>
+
+<!-- ============================================================
+     QUICK ACTION CARDS
+     ============================================================ -->
+<section class="py-5 bg-light-gray" aria-labelledby="quickActHeading">
+  <div class="container">
+    <div class="text-center mb-4">
+      <span class="section-label">Get Started</span>
+      <h2 class="section-title" id="quickActHeading">What Can We Help You With?</h2>
+    </div>
+
+    <div class="row g-4">
+      <div class="col-md-6 col-lg-3">
+        <div class="feature-card text-center h-100">
+          <div class="feature-icon icon-blue mx-auto">
+            <i class="bi bi-building-check"></i>
+          </div>
+          <h5>Reserve a Venue</h5>
+          <p>Browse 60+ on-campus spaces — from intimate classrooms to iconic landmark halls.</p>
+          <a href="venues.html" class="card-link">
+            Browse Venues <i class="bi bi-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-3">
+        <div class="feature-card text-center h-100">
+          <div class="feature-icon icon-gold mx-auto">
+            <i class="bi bi-headset"></i>
+          </div>
+          <h5>Request Event Support</h5>
+          <p>AV technicians, lighting crews, staging, security coordination, and more.</p>
+          <a href="services.html" class="card-link">
+            View Services <i class="bi bi-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-3">
+        <div class="feature-card text-center h-100">
+          <div class="feature-icon icon-navy mx-auto">
+            <i class="bi bi-clipboard2-check"></i>
+          </div>
+          <h5>Submit a Booking Request</h5>
+          <p>Fill out our streamlined request form and our team will respond within 2 business days.</p>
+          <a href="booking.html" class="card-link">
+            Start Request <i class="bi bi-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-3">
+        <div class="feature-card text-center h-100">
+          <div class="feature-icon icon-teal mx-auto">
+            <i class="bi bi-journal-text"></i>
+          </div>
+          <h5>Review Event Policies</h5>
+          <p>Understand insurance requirements, catering guidelines, noise ordinances, and safety rules.</p>
+          <a href="policies.html" class="card-link">
+            Read Policies <i class="bi bi-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+ 
+<!-- ============================================================
+       FEATURED VENUES PREVIEW
+       ============================================================ -->
+  <section class="py-5" aria-labelledby="featVenuesHeading">
+    <div class="container">
+      <div class="row align-items-end mb-4">
+        <div class="col-md-8">
+          <span class="section-label">Campus Spaces</span>
+          <h2 class="section-title" id="featVenuesHeading">
+            Iconic Venues Across <span>UCLA</span>
+          </h2>
+          <div class="section-divider"></div>
+          <p class="section-desc">
+            From Royce Hall's grand auditorium to sun-drenched outdoor plazas,
+            UCLA's portfolio of event spaces suits every scale and occasion.
+          </p>
+        </div>
+        <div class="col-md-4 text-md-end">
+          <a href="venues.html" class="btn-outline-ucla mt-3 mt-md-0">
+            View All Venues <i class="bi bi-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+
+      <div class="row g-4">
+        <!-- Venue 1: Royce Hall -->
+        <div class="col-md-6 col-lg-4">
+          <div class="venue-card card h-100">
+            <div class="venue-img-wrap">
+              <img
+                src="https://images.unsplash.com/photo-1580582932707-520aed937b7b?w=700&q=75"
+                alt="Grand university auditorium"
+                loading="lazy"
+              />
+              <span class="venue-badge premium">Signature Venue</span>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Royce Hall</h5>
+              <div class="venue-location">
+                <i class="bi bi-geo-alt"></i> Central Campus, Westwood
+              </div>
+              <div class="venue-meta">
+                <span class="venue-meta-chip"><i class="bi bi-people"></i> Up to 1,833</span>
+                <span class="venue-meta-chip"><i class="bi bi-building"></i> Indoor</span>
+                <span class="venue-meta-chip"><i class="bi bi-star"></i> Landmark</span>
+              </div>
+              <p class="venue-equipment">Full production suite · Concert-grade audio · Stage lighting · Green rooms · Live-stream ready</p>
+            </div>
+            <div class="card-footer">
+              <span class="venue-avail"><span class="dot-green"></span> Limited Dates Available</span>
+              <a href="venues.html#royce" class="btn-ucla-primary" style="padding:0.42rem 1rem;font-size:0.82rem;">
+                View Details
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Venue 2: Pauley Pavilion -->
+        <div class="col-md-6 col-lg-4">
+          <div class="venue-card card h-100">
+            <div class="venue-img-wrap">
+              <img
+                src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=700&q=75"
+                alt="Large arena interior"
+                loading="lazy"
+              />
+              <span class="venue-badge indoor">Arena</span>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Pauley Pavilion</h5>
+              <div class="venue-location">
+                <i class="bi bi-geo-alt"></i> South Campus Athletic Zone
+              </div>
+              <div class="venue-meta">
+                <span class="venue-meta-chip"><i class="bi bi-people"></i> Up to 13,800</span>
+                <span class="venue-meta-chip"><i class="bi bi-building"></i> Indoor</span>
+                <span class="venue-meta-chip"><i class="bi bi-camera-video"></i> Broadcast</span>
+              </div>
+              <p class="venue-equipment">Arena-scale PA · Jumbotron display · Broadcast production · Full locker facilities</p>
+            </div>
+            <div class="card-footer">
+              <span class="venue-avail"><span class="dot-green"></span> Available — Select Dates</span>
+              <a href="venues.html#pauley" class="btn-ucla-primary" style="padding:0.42rem 1rem;font-size:0.82rem;">
+                View Details
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Venue 3: Sunset Canyon Plaza -->
+        <div class="col-md-6 col-lg-4">
+          <div class="venue-card card h-100">
+            <div class="venue-img-wrap">
+              <img
+                src="https://images.unsplash.com/photo-1519167758481-83f550bb49b3?w=700&q=75"
+                alt="Outdoor campus plaza event"
+                loading="lazy"
+              />
+              <span class="venue-badge outdoor">Outdoor</span>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Sunset Canyon Recreation Plaza</h5>
+              <div class="venue-location">
+                <i class="bi bi-geo-alt"></i> North Campus, Near Dorms
+              </div>
+              <div class="venue-meta">
+                <span class="venue-meta-chip"><i class="bi bi-people"></i> Up to 500</span>
+                <span class="venue-meta-chip"><i class="bi bi-sun"></i> Outdoor</span>
+                <span class="venue-meta-chip"><i class="bi bi-music-note-beamed"></i> PA Ready</span>
+              </div>
+              <p class="venue-equipment">Portable stage · Weather shelter options · Power pedestals · Food truck access</p>
+            </div>
+            <div class="card-footer">
+              <span class="venue-avail"><span class="dot-green"></span> Open Availability</span>
+              <a href="venues.html#sunset" class="btn-ucla-primary" style="padding:0.42rem 1rem;font-size:0.82rem;">
+                View Details
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+      <!-- WHO WE SUPPORT -->
+      <section class="section">
+        <div class="container">
+          <div class="row align-items-center g-5">
+
+            <div class="col-lg-6">
+
+              <span class="section-kicker">
+                Who we support
+              </span>
+
+              <h2 class="mt-2 mb-3">
+                A campus operations desk built for academic life.
+              </h2>
+
+              <p class="lead lead-narrow">
+                Whether you are planning a student showcase,
+                a faculty symposium, a department reception,
+                or an approved community program,
+                the portal helps route your request
+                to the right venue, production,
+                and safety teams.
+              </p>
+              <div class="row g-3 mt-3">
+                <div class="col-sm-6"><div class="step-card"><strong>Student organizations</strong><p class="mb-0 mt-2">Space advising, room layouts, basic AV, and student event readiness.</p></div></div>
+                <div class="col-sm-6"><div class="step-card"><strong>Faculty and staff</strong><p class="mb-0 mt-2">Lecture, conference, and reception planning for academic programs.</p></div></div>
+                <div class="col-sm-6"><div class="step-card"><strong>Campus departments</strong><p class="mb-0 mt-2">Production support for ceremonies, trainings, and signature events.</p></div></div>
+                <div class="col-sm-6"><div class="step-card"><strong>Approved partners</strong><p class="mb-0 mt-2">Guided intake for external programs aligned with campus policy.</p></div></div>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <img class="feature-image rounded-2 shadow-sm" src="https://images.unsplash.com/photo-1523580846011-d3a5bc25702b?auto=format&fit=crop&w=1200&q=85" alt="Students walking across a sunny university campus">
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Booking workflow preview -->
+      <section class="section section-soft">
+        <div class="container">
+          <div class="row g-5">
+            <div class="col-lg-5">
+              <span class="section-kicker">How it works</span>
+              <h2 class="mt-2">From idea to event-day execution.</h2>
+              <p>Use one request to start the conversation. Our review flow considers space fit, technical scope, staffing, accessibility, risk, and campus calendar impacts.</p>
+              <a class="btn btn-primary" href="booking.html">Start a Booking Request</a>
+            </div>
+            <div class="col-lg-7">
+              <ol class="timeline-list">
+                <li><div><strong>Submit the request</strong><p class="mb-0">Share event goals, preferred venue, date, guest count, and production needs.</p></div></li>
+                <li><div><strong>Receive routing guidance</strong><p class="mb-0">The request is reviewed for availability, policy requirements, and support teams.</p></div></li>
+                <li><div><strong>Confirm scope and estimate</strong><p class="mb-0">Finalize layouts, staffing, technical equipment, and event-day access details.</p></div></li>
+                <li><div><strong>Operate with confidence</strong><p class="mb-0">Event staff coordinate setup, support, safety checkpoints, and closeout.</p></div></li>
+              </ol>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+  <!-- ============================================================
+       SERVICES HIGHLIGHTS
+       ============================================================ -->
+  <section class="py-5" aria-labelledby="svcHighHeading">
+    <div class="container">
+      <div class="text-center mb-5">
+        <span class="section-label">What We Offer</span>
+        <h2 class="section-title" id="svcHighHeading">Full-Service Event Production</h2>
+        <div class="section-divider mx-auto"></div>
+        <p class="section-desc mx-auto text-center">
+          Beyond venue reservations, we provide end-to-end production support
+          for every type of campus event.
+        </p>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-sm-6 col-lg-3">
+          <div class="text-center p-3">
+            <div class="feature-icon icon-blue mx-auto mb-3" style="width:64px;height:64px;font-size:1.8rem;">
+              <i class="bi bi-display"></i>
+            </div>
+            <h6 class="fw-700 text-ucla-navy mb-2">Audio &amp; Visual</h6>
+            <p class="small text-muted">Professional AV technicians, projection systems, microphone arrays, and live-stream setup.</p>
+          </div>
+        </div>
+        <div class="col-sm-6 col-lg-3">
+          <div class="text-center p-3">
+            <div class="feature-icon icon-gold mx-auto mb-3" style="width:64px;height:64px;font-size:1.8rem;">
+              <i class="bi bi-lightbulb"></i>
+            </div>
+            <h6 class="fw-700 text-ucla-navy mb-2">Lighting Design</h6>
+            <p class="small text-muted">Ambient, stage, and architectural lighting for conferences, galas, and performances.</p>
+          </div>
+        </div>
+        <div class="col-sm-6 col-lg-3">
+          <div class="text-center p-3">
+            <div class="feature-icon icon-navy mx-auto mb-3" style="width:64px;height:64px;font-size:1.8rem;">
+              <i class="bi bi-people"></i>
+            </div>
+            <h6 class="fw-700 text-ucla-navy mb-2">Staffing &amp; Ushering</h6>
+            <p class="small text-muted">Trained event staff for check-in, crowd flow, accessibility assistance, and guest services.</p>
+          </div>
+        </div>
+        <div class="col-sm-6 col-lg-3">
+          <div class="text-center p-3">
+            <div class="feature-icon icon-teal mx-auto mb-3" style="width:64px;height:64px;font-size:1.8rem;">
+              <i class="bi bi-shield-check"></i>
+            </div>
+            <h6 class="fw-700 text-ucla-navy mb-2">Security Coordination</h6>
+            <p class="small text-muted">UCPD liaison services, access control, and crowd safety planning for large-scale events.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="text-center mt-4">
+        <a href="services.html" class="btn-outline-ucla">
+          Explore All Services <i class="bi bi-arrow-right"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       TESTIMONIALS
+       ============================================================ -->
+  <section class="py-5 bg-light-gray" aria-labelledby="testimonialsHeading">
+    <div class="container">
+      <div class="text-center mb-5">
+        <span class="section-label">Community Voices</span>
+        <h2 class="section-title" id="testimonialsHeading">What Bruin Event Planners Say</h2>
+        <div class="section-divider mx-auto"></div>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="testimonial-card">
+            <div class="quote-mark">"</div>
+            <p>The Event Services team transformed our annual leadership summit. The AV setup was flawless and the venue coordinator kept everything running ahead of schedule.</p>
+            <div class="testimonial-author">
+              <img
+                src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&q=80"
+                alt="Aisha R."
+                class="author-avatar"
+              />
+              <div class="author-info">
+                <div class="name">Aisha R.</div>
+                <div class="role">Undergraduate Students Assoc. President</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="testimonial-card">
+            <div class="quote-mark">"</div>
+            <p>Booking Royce Hall for our department's centennial was seamless. From permits to post-event cleanup, the team handled every detail professionally.</p>
+            <div class="testimonial-author">
+              <img
+                src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&q=80"
+                alt="Dr. Marcus T."
+                class="author-avatar"
+              />
+              <div class="author-info">
+                <div class="name">Dr. Marcus T.</div>
+                <div class="role">Professor, School of Engineering</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="testimonial-card">
+            <div class="quote-mark">"</div>
+            <p>As an external partner hosting a corporate recruitment event, we were impressed by how organized and welcoming the UCLA campus operations team was.</p>
+            <div class="testimonial-author">
+              <img
+                src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&q=80"
+                alt="Priya N."
+                class="author-avatar"
+              />
+              <div class="author-info">
+                <div class="name">Priya N.</div>
+                <div class="role">Talent Programs Director, Tech Partner</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       CTA SECTION
+       ============================================================ -->
+  <section class="cta-section text-center" aria-labelledby="ctaHeading">
+    <div class="container position-relative" style="z-index:1;">
+      <span class="section-label" style="background:rgba(255,255,255,0.15);color:rgba(255,255,255,0.9);">
+        Ready to Plan?
+      </span>
+      <h2 class="mt-3" id="ctaHeading">Let's Make Your Event Unforgettable</h2>
+      <p>
+        Whether you're hosting 20 or 20,000, UCLA Event Services is your partner
+        for exceptional campus experiences.
+      </p>
+      <div class="d-flex gap-3 justify-content-center flex-wrap">
+        <a href="booking.html" class="btn-ucla-gold btn-lg-ucla">
+          <i class="bi bi-calendar-plus"></i> Submit a Booking Request
+        </a>
+        <a href="tel:+13108251234" class="btn-outline-white btn-lg-ucla">
+          <i class="bi bi-telephone"></i> (310) 825-1234
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       FOOTER
+       ============================================================ -->
+  <footer class="footer-main" aria-label="Site footer">
+    <div class="container">
+      <div class="row g-5">
+        <!-- Brand column -->
+        <div class="col-lg-4 col-md-6">
+          <div class="footer-brand">
+            <div class="logo-badge">UCLA</div>
+            <div class="mt-1" style="color:rgba(255,255,255,0.85);font-weight:700;font-size:1rem;">
+              Event Services &amp; Venue Operations
+            </div>
+            <p>
+              Serving student organizations, faculty, staff, and approved campus
+              partners with professional event coordination since 1986.
+            </p>
+            <!-- Social icons -->
+            <div class="footer-social" aria-label="Social media links">
+              <a href="#" class="social-btn" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+              <a href="#" class="social-btn" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+              <a href="#" class="social-btn" aria-label="Twitter / X"><i class="bi bi-twitter-x"></i></a>
+              <a href="#" class="social-btn" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Navigation column -->
+        <div class="col-lg-2 col-sm-6">
+          <div class="footer-col">
+            <h6>Navigate</h6>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="venues.html">Venues</a></li>
+              <li><a href="services.html">Services</a></li>
+              <li><a href="booking.html">Book an Event</a></li>
+              <li><a href="policies.html">Policies &amp; FAQ</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Resources column -->
+        <div class="col-lg-2 col-sm-6">
+          <div class="footer-col">
+            <h6>Resources</h6>
+            <ul>
+              <li><a href="#">Event Planning Guide</a></li>
+              <li><a href="#">Catering Partners</a></li>
+              <li><a href="#">Insurance Requirements</a></li>
+              <li><a href="#">Campus Map</a></li>
+              <li><a href="#">Bruin Events Calendar</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Contact column -->
+        <div class="col-lg-4 col-md-6">
+          <div class="footer-col">
+            <h6>Contact Us</h6>
+            <div class="footer-contact-item">
+              <i class="bi bi-geo-alt-fill"></i>
+              <span>308 Westwood Plaza, Suite 105<br>Los Angeles, CA 90095</span>
+            </div>
+            <div class="footer-contact-item">
+              <i class="bi bi-telephone-fill"></i>
+              <span>(310) 825-1234</span>
+            </div>
+            <div class="footer-contact-item">
+              <i class="bi bi-envelope-fill"></i>
+              <span>eventservices@ucla.edu</span>
+            </div>
+            <div class="footer-contact-item">
+              <i class="bi bi-clock-fill"></i>
+              <span>Mon – Fri: 8:00 AM – 5:00 PM</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer bottom bar -->
+    <div class="footer-bottom">
+      <div class="container d-flex flex-wrap justify-content-between align-items-center gap-2">
+        <span>&copy; 2025 The Regents of the University of California. All rights reserved.</span>
+        <div class="d-flex gap-3 flex-wrap">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Accessibility</a>
+          <a href="#">Terms of Use</a>
+          <a href="#">Campus Safety</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+ <!-- Scroll to top -->
+  <button id="scrollTopBtn" aria-label="Scroll to top">
+    <i class="bi bi-arrow-up"></i>
+  </button>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/main.js"></script>
+  
+</body>
+</html>
